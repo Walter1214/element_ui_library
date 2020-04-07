@@ -1,5 +1,6 @@
 <template lang="pug">
-.hello-world sdfasfdf
+.hello-world
+  el-button asfsdf
 </template>
 
 <script lang="ts">
