@@ -1,0 +1,72 @@
+{
+    "name": "@fe_org/element_ui_library",
+    "version": "0.1.3",
+    "private": false,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint",
+        "bundle": "sh ./shells/bundle.sh",
+        "deploy": "sh ./shells/deploy.sh",
+        "storybook:build": "vue-cli-service storybook:build -c config/storybook",
+        "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook"
+    },
+    "main": "bundle/components/index.js",
+    "files": [
+        "bundle/components/**/*.{js,vue}",
+        "bundle/styles/**/*.styl"
+    ],
+    "peerDependencies": {
+        "vue": ">=2.6.11"
+    },
+    "dependencies": {
+        "@fe_org/stylus_style": "^0.1.1",
+        "element-ui": "^2.13.0"
+    },
+    "devDependencies": {
+        "@storybook/addon-actions": ">=5.3.17",
+        "@storybook/addon-docs": ">=5.3.17",
+        "@storybook/addon-knobs": ">=5.3.17",
+        "@storybook/addon-links": ">=5.3.17",
+        "@storybook/addon-notes": ">=5.3.17",
+        "@storybook/vue": ">=5.3.17",
+        "@typescript-eslint/eslint-plugin": "^2.25.0",
+        "@typescript-eslint/parser": "^2.25.0",
+        "@vue/cli-plugin-babel": "~4.2.3",
+        "@vue/cli-plugin-eslint": "~4.2.3",
+        "@vue/cli-plugin-pwa": "~4.2.3",
+        "@vue/cli-plugin-router": "~4.2.3",
+        "@vue/cli-plugin-typescript": "~4.2.3",
+        "@vue/cli-plugin-vuex": "~4.2.3",
+        "@vue/cli-service": "~4.2.3",
+        "@vue/eslint-config-prettier": "^6.0.0",
+        "@vue/eslint-config-typescript": "^5.0.2",
+        "eslint": "^6.8.0",
+        "eslint-plugin-prettier": "^3.1.2",
+        "eslint-plugin-vue": "^6.2.2",
+        "lint-staged": "^10.0.10",
+        "prettier": "^2.0.2",
+        "stylus": "^0.54.7",
+        "stylus-loader": "^3.0.2",
+        "typescript": "~3.8.3",
+        "vue-cli-plugin-pug": "~1.0.7",
+        "vue-cli-plugin-storybook": "~1.2.1",
+        "vue-template-compiler": "^2.6.11",
+        "vue": ">=2.6.11",
+        "core-js": "^3.6.4",
+        "register-service-worker": "^1.7.1",
+        "vue-class-component": "^7.2.3",
+        "vue-property-decorator": "^8.4.1",
+        "vue-router": "^3.1.6",
+        "vuex": "^3.1.3"
+    },
+    "gitHooks": {
+        "pre-commit": "lint-staged"
+    },
+    "lint-staged": {
+        "*.{js,jsx,vue,ts,tsx}": [
+            "vue-cli-service lint",
+            "git add"
+        ]
+    }
+}
