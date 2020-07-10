@@ -1,9 +1,8 @@
 module.exports = {
   css: {
-    requireModuleExtension: false,
     loaderOptions: {
       stylus: {
-        import: '~assets/styles/app.styl'
+        import: '~@/assets/styles/app.styl'
       }
     }
   },
